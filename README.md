@@ -4,7 +4,7 @@ Install Node.js: https://nodejs.org/en/download/package-manager/
 
 <b>Install node modules (server and frontend) with npm:</b> <br>
     <small>jidlopodnos/ <small>` npm install` <br>
-    `cd /frontend` <br>
+    `cd frontend` <br>
     jidlopodnos/frontend` npm install` <br>
 
 <b>Start in development:</b> <br>
