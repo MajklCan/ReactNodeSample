@@ -1,8 +1,13 @@
 import mysql from 'mysql'
 import dotenv from 'dotenv'
-
 dotenv.config()
 
+/**
+ * Soubor obsahuje vzor připojení k MYSQL Databázi
+ */
+
+
+//Nastavení připojení
 const options = {   
     multipleStatements: true,
     host: process.env.DB_HOST,
@@ -12,12 +17,6 @@ const options = {
 };
 
 var con
-
-//REMOTE SQL - KEEP CONNECTION ALIVE
-setInterval(function () {
-    query('SELECT 1');
-}, 5000);
-//---------------------------------
 
 
 function handleDisconnect() {
@@ -46,8 +45,6 @@ function handleDisconnect() {
 export const query = (query,params=[]) => {
 	return new Promise((resolve, reject) => {
 		try {
-                //if(query!="SELECT 1")
-                //console.log(query)  // LOG QUERY ?
 			con.query(query,params,function(err, rows) {
 				if (err) {
 					reject(err)
@@ -77,8 +74,6 @@ export const query_structured = (query,params=[]) => {
 
 	return new Promise((resolve, reject) => {
 		try {
-                //if(query!="SELECT 1")
-                //console.log(query)  // LOG QUERY ?
 			con.query(query,params,function(err, rows) {
 				if (err) {
                     resolve([null,err])

@@ -15,7 +15,7 @@ function App() {
           <li>Položka</li>
         </ol>
         
-        {/* <Items /> */}
+        <Items />
 
       </header>
     </div>

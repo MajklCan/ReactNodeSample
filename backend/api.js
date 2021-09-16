@@ -17,8 +17,9 @@ router.get('/data',(req,res) => {
 
 	let sampleData = {
 		"items": [
-		  { "id": 1, "name": "Apples",  "price": "$3" },
-		  { "id": 2, "name": "Peaches", "price": "$5" }
+		  { "id": 1, "name": "Apple",  "price": "3" },
+		  { "id": 2, "name": "Hotdog", "price": "5" },
+		  { "id": 3, "name": "Burger", "price": "8" }
 		] 
 	  }
 	
