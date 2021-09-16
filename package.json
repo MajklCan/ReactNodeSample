@@ -1,0 +1,59 @@
+{
+  "name": "jidlopodnos",
+  "version": "1.0.0",
+  "description": "Jidlopodos.cz client side web app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "update": "git pull && npm install && cd frontend && npm install && npm run build && cd .. && pm2 delete jidlopodnos.cz &&  pm2 start ecosystem.config.cjs",
+    "test": "mocha",
+    "test2": ""
+  },
+  "keywords": [
+    "React",
+    "Nodejs",
+    "Ionic"
+  ],
+  "author": "Michal Caninec Martin Hajný Jakub Šťastný",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "fs": "^0.0.1-security",
+    "geoip-lite": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.0.0",
+    "nodemailer": "^6.4.18",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "react-animations": "^1.0.0",
+    "react-circular-progressbar": "^2.0.4",
+    "react-hook-form": "^7.10.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "request": "^2.88.2",
+    "styled-components": "^5.2.1",
+    "swr": "^0.4.2",
+    "tiny-json-http": "^7.3.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.3.0"
+  }
+}
